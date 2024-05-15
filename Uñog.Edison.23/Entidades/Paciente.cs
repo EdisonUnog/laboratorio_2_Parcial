@@ -32,5 +32,10 @@ namespace Entidades
 
             return sb.ToString();
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

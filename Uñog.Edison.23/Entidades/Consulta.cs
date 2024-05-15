@@ -14,20 +14,37 @@ namespace Entidades
         public DateTime Fecha { get; }
         public Paciente Paciente { get; }
 
+        //public Paciente Paciente 
+        //{
+        //    get { return paciente.NombreApellido; }
+        //}
+
         public Consulta(DateTime fecha, Paciente paciente)
         {
+            this.paciente = paciente;
             this.fecha = fecha;
         }
+
 
         public override string ToString()
         {
             StringBuilder sb = new();
 
-            sb.AppendLine($"{base.ToString()}");
             sb.AppendLine($" *Fecha: {fecha}");
+            //sb.AppendLine($" *Paciente: {paciente.ToString()}");
 
             return sb.ToString();
         }
+        //public static string ToString(Paciente p)
+        //{
+        //    StringBuilder sb = new();
+
+        //    sb.AppendLine($" *Se va atender a: {p.NombreApellido}");
+
+
+
+        //    return sb.ToString();
+        //}
 
 
     }

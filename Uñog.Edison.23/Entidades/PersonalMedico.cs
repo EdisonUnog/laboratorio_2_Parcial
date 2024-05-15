@@ -25,20 +25,23 @@ namespace Entidades
             string Residente = esResidente ? "SI" : "NO";
             StringBuilder sb = new();
 
-            sb.AppendLine($"{base.ToString()}");
-            sb.AppendLine($" *Es Residenete: {Residente}");
+            sb.AppendLine($" *{base.ToString()}");
+            sb.AppendLine($" *Finalizo residencia?: {Residente}");
+            sb.AppendLine($" *Edad: {Edad}");
 
             return sb.ToString();
         }
 
-        //public static Consulta operator +(PersonalMedico doctor, Paciente paciente)
-        //{
-        //    DateTime fechaActual = DateTime.Today;
-        //    if (doctor != null && paciente != null)
-        //    {
-        //        new Consulta(fechaActual, paciente);
-        //    }
-        //}
+        public static bool operator +(PersonalMedico doctor, Paciente paciente)
+        {
+            DateTime fechaActual = DateTime.Today;
+            if (doctor != null && paciente != null)
+            {
+                doctor.consultas.Add(new Consulta(fechaActual, paciente));
+                return true;
+            }
+            return false;
+        }
 
     }
 }

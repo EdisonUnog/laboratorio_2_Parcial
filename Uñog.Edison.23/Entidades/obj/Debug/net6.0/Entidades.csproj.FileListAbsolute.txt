@@ -9,3 +9,4 @@ D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratori
 D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Entidades\obj\Debug\net6.0\refint\Entidades.dll
 D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Entidades\obj\Debug\net6.0\Entidades.pdb
 D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Entidades\obj\Debug\net6.0\ref\Entidades.dll
+D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Entidades\obj\Debug\net6.0\Entidades.sourcelink.json

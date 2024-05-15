@@ -16,3 +16,4 @@ D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratori
 D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Uñog.Edison.23\bin\Debug\net6.0\Entidades.pdb
 D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Uñog.Edison.23\obj\Debug\net6.0\Uñog.Edison.23.csproj.AssemblyReference.cache
 D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Uñog.Edison.23\obj\Debug\net6.0\Uñog.Edi.0B3731F6.Up2Date
+D:\1._UNIVERSIDAD\UTN_Avellaneda\SEGUNDA_PARTE\PROGRAMACION_Y_LABO_II\laboratorio_2_Parcial\Uñog.Edison.23\Uñog.Edison.23\obj\Debug\net6.0\Uñog.Edison.23.sourcelink.json

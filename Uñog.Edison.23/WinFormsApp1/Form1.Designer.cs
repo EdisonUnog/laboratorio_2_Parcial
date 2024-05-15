@@ -92,6 +92,7 @@
             Controls.Add(lstPacientes);
             Controls.Add(lstMedicos);
             Name = "FrmAtencion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Atencion de Pacientes";
             FormClosing += FrmAtencion_FormClosing;
             Load += FrmAtencion_Load;

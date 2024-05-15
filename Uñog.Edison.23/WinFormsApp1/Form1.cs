@@ -4,6 +4,7 @@ namespace WinFormsApp1
 {
     public partial class FrmAtencion : Form
     {
+        private Consulta consulta;
         public FrmAtencion()
         {
             InitializeComponent();
@@ -34,15 +35,19 @@ namespace WinFormsApp1
             PersonalMedico personalMedico = lstMedicos.SelectedItem as PersonalMedico;
             Paciente paciente = lstPacientes.SelectedItem as Paciente;
 
+            
             if (personalMedico is not null)
             {
                 if (personalMedico + paciente)
                 {
-                    //
+                    // , consulta.Fecha, paciente.ToString()
+                    MessageBox.Show($"Fecha:  atendio a: {paciente.ToString()}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    richMedicoPaciente.Text = personalMedico.FichaExtra();
                 }
                 else
                 {
-                    //
+                    MessageBox.Show("No hay consultas", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }

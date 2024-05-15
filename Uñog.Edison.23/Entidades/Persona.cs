@@ -57,7 +57,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{nombre} {apellido}";
+            return nombre + apellido;
         }
 
     }
