@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WinFormsApp1/1.0.0": {
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "Uñog.Edison.23": "1.0.0"
+        },
+        "runtime": {
+          "WinFormsApp1.dll": {}
+        }
+      },
+      "Entidades/1.0.0": {
+        "runtime": {
+          "Entidades.dll": {}
+        }
+      },
+      "Uñog.Edison.23/1.0.0": {
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "runtime": {
+          "Uñog.Edison.23.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WinFormsApp1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Uñog.Edison.23/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
