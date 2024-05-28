@@ -37,12 +37,7 @@ namespace Entidades
         /// <returns>Un string con todos los datos del medico y sus pacientes atendidos en consultas</returns>
         internal override string FichaExtra()
         {
-            //string residente = esResidente ? "SI" : "NO";
-
             StringBuilder sb = new StringBuilder();
-
-            //sb.AppendLine($" {base.ToString()}");
-            //sb.AppendLine($" *¿Finalizo residencia? {residente}");
             sb.AppendLine($"¿Finalizó residencia? {(this.esResidente ? "SI" : "NO")}");
             sb.AppendLine(" *ATENCIONES:");
 

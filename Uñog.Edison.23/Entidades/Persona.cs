@@ -39,15 +39,13 @@ namespace Entidades
         }
 
         internal abstract string FichaExtra();
-        //  internal override string Descripcion()
+        //internal override string Descripcion()
         public static string FichaPersonal(Persona p)
         {
             StringBuilder sb = new();
 
             sb.AppendLine($"{p.ToString()}");
             sb.AppendLine($" *Edad: {p.Edad}");
-            //sb.AppendLine($" *Barrio: {p.barrioRecidencia}");
-            //sb.AppendLine($" *Fecha Nacimiento: {p.FichaExtra()}");
             sb.AppendLine($" {p.FichaExtra()}");
 
             return sb.ToString();
