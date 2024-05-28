@@ -14,28 +14,23 @@ namespace Entidades
         public string Diagnostico
         {
             get { return diagnostico; }
-            set { this.diagnostico = value; }
+            set { diagnostico = value; }
         }
 
-        public Paciente(string nombre, string apellido, DateTime nacimiento, string barrioRecidencia) 
-            : base(nombre, apellido, nacimiento, barrioRecidencia)
+        public Paciente(string nombre, string apellido, DateTime fechaNacimiento, string barrioRecidencia)
+            : base(nombre, apellido, fechaNacimiento, barrioRecidencia)
         {
+
         }
 
-        public override string FichaExtra()
+        internal override string FichaExtra()
         {
             StringBuilder sb = new();
 
-            sb.AppendLine($"{base.ToString()}");
-            sb.AppendLine($" *Recide: {barrioRecidencia}");
-            sb.AppendLine($" *Diagnosstico: {diagnostico}");
+            sb.AppendLine($" *Reside en: {barrioRecidencia}");
+            sb.AppendLine($" *Diagnostico: {diagnostico}");
 
             return sb.ToString();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
         }
     }
 }

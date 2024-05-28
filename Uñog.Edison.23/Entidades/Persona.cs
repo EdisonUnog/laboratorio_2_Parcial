@@ -4,60 +4,58 @@ namespace Entidades
 {
     public abstract class Persona
     {
+        protected string nombre;
         protected string apellido;
         protected string barrioRecidencia;
-        protected DateTime nacimiento;
-        protected string nombre;
+        protected DateTime fechaNacimiento;
 
         public int Edad
         {
             get
-            {  
-                return DateTime.Today.AddTicks(-this.nacimiento.Ticks).Year - 1;
+            {
+                return DateTime.Today.AddTicks(-this.fechaNacimiento.Ticks).Year - 1;
             }
         }
 
-        public string NombreApellido
+        public string NombresCompletos
         {
             get
             {
-                return $"{nombre} {apellido}";
+                return $"*{apellido}, {nombre}";
             }
         }
 
-        public Persona(string nombre, string apellido, DateTime nacimiento) 
+        public Persona(string nombre, string apellido, DateTime fechaNacimiento)
         {
             this.nombre = nombre;
             this.apellido = apellido;
-            this.nacimiento = nacimiento;
+            this.fechaNacimiento = fechaNacimiento;
         }
 
-        public Persona(string nombre, string apellido, DateTime nacimiento, string barrioRecidencia)
-            : this(nombre, apellido, nacimiento)
+        public Persona(string nombre, string apellido, DateTime fechaNacimiento, string barrioRecidencia)
+            : this(nombre, apellido, fechaNacimiento)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.nacimiento = nacimiento;
             this.barrioRecidencia = barrioRecidencia;
         }
 
-        public abstract string FichaExtra();
-
-        public static string FichaPerssona(Persona p)
+        internal abstract string FichaExtra();
+        //  internal override string Descripcion()
+        public static string FichaPersonal(Persona p)
         {
             StringBuilder sb = new();
 
-            sb.AppendLine($" *Apellido y Nombre: {p.NombreApellido}");
+            sb.AppendLine($"{p.ToString()}");
             sb.AppendLine($" *Edad: {p.Edad}");
-            sb.AppendLine($" *Barrio: {p.barrioRecidencia}");
-            sb.AppendLine($" *Fecha Nacimiento: {p.nacimiento}");
+            //sb.AppendLine($" *Barrio: {p.barrioRecidencia}");
+            //sb.AppendLine($" *Fecha Nacimiento: {p.FichaExtra()}");
+            sb.AppendLine($" {p.FichaExtra()}");
 
             return sb.ToString();
         }
 
         public override string ToString()
         {
-            return nombre + apellido;
+            return this.NombresCompletos;
         }
 
     }

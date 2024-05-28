@@ -20,6 +20,49 @@ namespace WinFormsApp1
             lstPacientes.Items.Add(new Paciente("John Jairo", "Trelles", new DateTime(1978, 8, 30), "Medellin"));
         }
 
+        private void lstMedicos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.lstMedicos.SelectedItem != null)
+            {
+                PersonalMedico personalMedico = this.lstMedicos.SelectedItem as PersonalMedico;
+
+                if (personalMedico is not null)
+                {
+                    this.richMedicoPaciente.Text = Persona.FichaPersonal(personalMedico);
+                }
+            }
+        }
+
+        private void btnAtender_Click(object sender, EventArgs e)
+        {
+            if (this.lstMedicos.SelectedItems != null && this.lstPacientes.SelectedItems != null)
+            {
+                PersonalMedico personalMedico = lstMedicos.SelectedItem as PersonalMedico;
+                Paciente paciente = lstPacientes.SelectedItem as Paciente;
+
+                if (personalMedico is not null && paciente is not null)
+                {
+                    Consulta consulta = personalMedico + paciente;
+
+                    if (consulta is not null)
+                    {
+                        paciente.Diagnostico = "Curado";
+
+                        MessageBox.Show($"{consulta.ToString()}", "Atención finalizada", MessageBoxButtons.OK);
+
+                        this.richMedicoPaciente.Text = Persona.FichaPersonal(personalMedico);
+                        this.lstMedicos.SelectedItem = null;
+                        this.lstPacientes.SelectedItem = null;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Medico y un Paciente para poder continuar.", "Error en los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void FrmAtencion_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Seguro desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -30,31 +73,10 @@ namespace WinFormsApp1
             }
         }
 
-        private void btnAtender_Click(object sender, EventArgs e)
-        {
-            PersonalMedico personalMedico = lstMedicos.SelectedItem as PersonalMedico;
-            Paciente paciente = lstPacientes.SelectedItem as Paciente;
-
-            
-            if (personalMedico is not null)
-            {
-                if (personalMedico + paciente)
-                {
-                    // , consulta.Fecha, paciente.ToString()
-                    MessageBox.Show($"Fecha:  atendio a: {paciente.ToString()}", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    richMedicoPaciente.Text = personalMedico.FichaExtra();
-                }
-                else
-                {
-                    MessageBox.Show("No hay consultas", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 }

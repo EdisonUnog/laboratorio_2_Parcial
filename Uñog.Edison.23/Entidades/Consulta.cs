@@ -11,41 +11,40 @@ namespace Entidades
         private DateTime fecha;
         private Paciente paciente;
 
-        public DateTime Fecha { get; }
-        public Paciente Paciente { get; }
+        public DateTime Fecha
+        {
+            get
+            {
+                return this.fecha;
+            }
+        }
 
-        //public Paciente Paciente 
-        //{
-        //    get { return paciente.NombreApellido; }
-        //}
+        public Paciente Paciente
+        {
+            get
+            {
+                return this.paciente;
+            }
+        }
 
+        /// <summary>
+        /// constructor de la clase Consulta
+        /// </summary>
+        /// <param name="fecha">fecha de la consulta</param>
+        /// <param name="paciente">Objeto de tipo paciente</param>
         public Consulta(DateTime fecha, Paciente paciente)
         {
-            this.paciente = paciente;
             this.fecha = fecha;
+            this.paciente = paciente;
         }
 
-
+        /// <summary>
+        /// Obtiene un string con la fecha de atencion y el nombre del paciente
+        /// </summary>
+        /// <returns>Un string con la fecha de atencion y el nombre del paciente</returns>
         public override string ToString()
         {
-            StringBuilder sb = new();
-
-            sb.AppendLine($" *Fecha: {fecha}");
-            //sb.AppendLine($" *Paciente: {paciente.ToString()}");
-
-            return sb.ToString();
+            return $" *Fecha: {fecha}, se ha atendidoa a: {paciente.NombresCompletos.ToString()}";
         }
-        //public static string ToString(Paciente p)
-        //{
-        //    StringBuilder sb = new();
-
-        //    sb.AppendLine($" *Se va atender a: {p.NombreApellido}");
-
-
-
-        //    return sb.ToString();
-        //}
-
-
     }
 }
